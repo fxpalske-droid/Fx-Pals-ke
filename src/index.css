@@ -1,0 +1,326 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --app-bg: #0c0e12;
+    --app-text: #e5e7eb;
+  }
+
+  [data-theme="light"],
+  html.light {
+    --app-bg: #faf5f7;
+    --app-text: #241a1f;
+  }
+
+  html {
+    background-color: #ffffff;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--app-bg);
+    color: var(--app-text);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+}
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES (Clean, crisp appearance with signature pink accents)
+   ========================================================================== */
+
+/* 1. Global Viewport & Body */
+[data-theme="light"],
+[data-theme="light"] body,
+html.light,
+html.light body {
+  background-color: #faf5f7 !important;
+  color: #241a1f !important;
+}
+
+/* 2. Layout & Shell Backgrounds */
+[data-theme="light"] .bg-\[\#0c0e12\],
+[data-theme="light"] .bg-\[\#0c0e13\],
+[data-theme="light"] .bg-\[\#0b0e14\],
+[data-theme="light"] .bg-\[\#0d1017\],
+[data-theme="light"] .bg-\[\#07090d\] {
+  background-color: #faf5f7 !important;
+}
+
+[data-theme="light"] aside.bg-\[\#0e1117\],
+[data-theme="light"] header.bg-\[\#0c0e13\],
+[data-theme="light"] .bg-\[\#0e1117\] {
+  background-color: #ffffff !important;
+}
+
+/* 3. Primary Card Surfaces, Modals, and Panels */
+[data-theme="light"] .bg-\[\#10141c\],
+[data-theme="light"] .bg-\[\#0e121a\],
+[data-theme="light"] .bg-\[\#11151c\],
+[data-theme="light"] .bg-\[\#13171f\],
+[data-theme="light"] .bg-\[\#0c0f16\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(219, 39, 119, 0.04);
+}
+
+/* 4. Secondary Nested Wells, Cards, and Containers */
+[data-theme="light"] .bg-\[\#141822\],
+[data-theme="light"] .bg-\[\#151a24\],
+[data-theme="light"] .bg-\[\#131720\],
+[data-theme="light"] .bg-\[\#121622\],
+[data-theme="light"] .bg-\[\#131722\],
+[data-theme="light"] .bg-\[\#151923\],
+[data-theme="light"] .bg-\[\#151922\],
+[data-theme="light"] .bg-\[\#0f131a\],
+[data-theme="light"] .bg-\[\#121620\],
+[data-theme="light"] .bg-\[\#141924\] {
+  background-color: #fdf2f4 !important;
+}
+
+/* 5. Sub-buttons, Nested Controls & Pills */
+[data-theme="light"] .bg-\[\#161c26\],
+[data-theme="light"] .bg-\[\#181f2c\],
+[data-theme="light"] .bg-\[\#181d27\],
+[data-theme="light"] .bg-\[\#171c26\],
+[data-theme="light"] .bg-\[\#1f2635\],
+[data-theme="light"] .bg-\[\#1e2536\],
+[data-theme="light"] .bg-\[\#181f2b\],
+[data-theme="light"] .bg-\[\#181d28\],
+[data-theme="light"] .bg-\[\#202735\],
+[data-theme="light"] .bg-\[\#232b3b\],
+[data-theme="light"] .bg-\[\#262f3f\],
+[data-theme="light"] .bg-\[\#2c3444\],
+[data-theme="light"] .bg-\[\#1b2230\] {
+  background-color: #fdf2f5 !important;
+}
+
+/* 6. Form Controls (Inputs, Selects, Textareas) */
+[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background-color: #ffffff !important;
+  color: #181114 !important;
+  border-color: #f0c3d0 !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+  border-color: #db2777 !important;
+  outline-color: #db2777 !important;
+  box-shadow: 0 0 0 1px #db2777 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #a38c98 !important;
+}
+
+/* Checkboxes and Radios */
+[data-theme="light"] input[type="checkbox"],
+[data-theme="light"] input[type="radio"] {
+  accent-color: #db2777 !important;
+}
+
+/* 7. Borders across All Components & Hex Values */
+[data-theme="light"] [class*="border-\[#"] {
+  border-color: #f3d2dc !important;
+}
+
+[data-theme="light"] .border-\[\#1e2533\],
+[data-theme="light"] .border-\[\#1b2230\],
+[data-theme="light"] .border-\[\#1c222e\],
+[data-theme="light"] .border-\[\#202735\],
+[data-theme="light"] .border-\[\#222a3a\],
+[data-theme="light"] .border-\[\#232b3b\],
+[data-theme="light"] .border-\[\#232b3c\],
+[data-theme="light"] .border-\[\#262f3f\],
+[data-theme="light"] .border-\[\#1a202c\],
+[data-theme="light"] .border-\[\#1d2331\],
+[data-theme="light"] .border-\[\#1d2332\],
+[data-theme="light"] .border-\[\#2c3444\],
+[data-theme="light"] .border-\[\#252f42\],
+[data-theme="light"] .border-\[\#212735\],
+[data-theme="light"] .border-\[\#1a2130\],
+[data-theme="light"] .border-\[\#1f2635\],
+[data-theme="light"] .border-\[\#181f2c\],
+[data-theme="light"] .border-\[\#262c3b\],
+[data-theme="light"] .border-\[\#2a354a\],
+[data-theme="light"] .border-\[\#2a3447\],
+[data-theme="light"] .border-\[\#232938\],
+[data-theme="light"] .border-\[\#212838\],
+[data-theme="light"] .border-\[\#333f55\] {
+  border-color: #f3d2dc !important;
+}
+
+[data-theme="light"] .divide-\[\#181f2c\] > * + *,
+[data-theme="light"] .divide-\[\#1b2230\] > * + *,
+[data-theme="light"] .divide-\[\#1e2533\] > * + * {
+  border-color: #f3d2dc !important;
+}
+
+/* 8. High-Contrast Typography */
+[data-theme="light"] .text-white {
+  color: #181114 !important;
+}
+[data-theme="light"] .text-gray-100 {
+  color: #241a1f !important;
+}
+[data-theme="light"] .text-gray-200 {
+  color: #382c32 !important;
+}
+[data-theme="light"] .text-gray-300 {
+  color: #52424a !important;
+}
+[data-theme="light"] .text-gray-400 {
+  color: #796670 !important;
+}
+[data-theme="light"] .text-gray-500 {
+  color: #9c8993 !important;
+}
+[data-theme="light"] .text-gray-600 {
+  color: #d1b8c4 !important;
+}
+
+/* 9. Signature Pink Accents */
+[data-theme="light"] .text-emerald-400,
+[data-theme="light"] .text-emerald-500,
+[data-theme="light"] .text-emerald-300 {
+  color: #db2777 !important;
+}
+
+[data-theme="light"] .hover\:text-emerald-300:hover,
+[data-theme="light"] .hover\:text-emerald-400:hover {
+  color: #be185d !important;
+}
+
+/* Primary Filled Buttons (White text on vibrant pink) */
+[data-theme="light"] .bg-emerald-600,
+[data-theme="light"] .bg-emerald-500 {
+  background-color: #db2777 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .bg-emerald-600 *,
+[data-theme="light"] .bg-emerald-500 * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+[data-theme="light"] .hover\:bg-emerald-500:hover,
+[data-theme="light"] .hover\:bg-emerald-600:hover {
+  background-color: #be185d !important;
+}
+
+/* Accent Borders */
+[data-theme="light"] [class*="border-emerald"] {
+  border-color: #f472b6 !important;
+}
+
+/* Accent Badges & Subtle Pill Backgrounds */
+[data-theme="light"] [class*="bg-emerald-500\/"],
+[data-theme="light"] [class*="bg-emerald-950"],
+[data-theme="light"] [class*="bg-emerald-900\/"],
+[data-theme="light"] .bg-\[\#15231c\],
+[data-theme="light"] .bg-\[\#0f1816\]\/30 {
+  background-color: rgba(219, 39, 119, 0.08) !important;
+  color: #db2777 !important;
+}
+
+/* Active Sidebar Navigation Item */
+[data-theme="light"] aside button.border-l-2.border-emerald-500,
+[data-theme="light"] aside button.text-emerald-400 {
+  background-color: #fce7ec !important;
+  color: #db2777 !important;
+  border-color: #db2777 !important;
+}
+
+[data-theme="light"] aside button.border-l-2.border-emerald-500 svg {
+  color: #db2777 !important;
+}
+
+/* Focus and Active Rings */
+[data-theme="light"] .focus\:border-emerald-500:focus {
+  border-color: #db2777 !important;
+}
+[data-theme="light"] .focus\:ring-emerald-500:focus {
+  --tw-ring-color: #db2777 !important;
+}
+
+/* SVG Progress Rings */
+[data-theme="light"] .stroke-emerald-400 {
+  stroke: #db2777 !important;
+}
+
+/* Premarket & Checklist Progress Bar */
+[data-theme="light"] .bg-sky-500 {
+  background-color: #ec4899 !important;
+}
+[data-theme="light"] .text-sky-400 {
+  color: #db2777 !important;
+}
+[data-theme="light"] .decoration-emerald-500\/50 {
+  text-decoration-color: rgba(219, 39, 119, 0.5) !important;
+}
+
+/* 10. Interactive Hover States */
+[data-theme="light"] [class*="hover:bg-\[#"]:hover {
+  background-color: #fce7ec !important;
+}
+
+[data-theme="light"] .hover\:text-white:hover,
+[data-theme="light"] .hover\:text-gray-100:hover,
+[data-theme="light"] .hover\:text-gray-200:hover {
+  color: #181114 !important;
+}
+
+/* 11. Tables in Light Theme */
+[data-theme="light"] thead.bg-\[\#0c0e14\],
+[data-theme="light"] thead {
+  background-color: #fdf2f4 !important;
+  border-color: #f3d2dc !important;
+}
+
+/* 12. Alert & Contrast Adjustments */
+[data-theme="light"] .text-rose-400 {
+  color: #e11d48 !important;
+}
+[data-theme="light"] .text-amber-400 {
+  color: #b45309 !important;
+}
+
+/* 13. Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1217;
+}
+::-webkit-scrollbar-thumb {
+  background: #232936;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333c4d;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #fdf2f4;
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #f3d2dc;
+  border-radius: 3px;
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+.tradingview-widget-container iframe {
+  background-color: #ffffff;
+}

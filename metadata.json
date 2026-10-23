@@ -1,0 +1,6 @@
+{
+  "name": "EDGE TRADER",
+  "description": "Private personal trading command center for discretionary forex and gold trading with structure and discipline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
