@@ -353,7 +353,7 @@ export const SanctuaryPage: React.FC<SanctuaryPageProps> = ({
       <audio ref={customAudioRef} loop />
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col justify-between min-h-[620px] p-5 sm:p-8">
+      <div className="relative z-10 flex flex-col justify-between min-h-[620px] p-5 sm:p-8 bg-[#ffffff]">
         {/* Top Header Bar */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
@@ -377,11 +377,11 @@ export const SanctuaryPage: React.FC<SanctuaryPageProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsZenMode(!isZenMode)}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-300 hover:text-white bg-black/40 hover:bg-black/60 border border-white/10 rounded-md backdrop-blur-xs transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-300 hover:text-white bg-[#ffffff] hover:bg-black/60 border border-white/10 rounded-md backdrop-blur-xs transition-colors"
               title={isZenMode ? 'Show Controls' : 'Zen Focus Mode (hide panels)'}
             >
               {isZenMode ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
-              <span className="hidden sm:inline">{isZenMode ? 'Show Controls' : 'Zen View'}</span>
+              <span className="hidden sm:inline bg-[#ffffff]">{isZenMode ? 'Show Controls' : 'Zen View'}</span>
             </button>
 
             {onNavigate && (
@@ -500,7 +500,7 @@ export const SanctuaryPage: React.FC<SanctuaryPageProps> = ({
 
         {/* Bottom Customization Controls (Hidden in Zen Mode) */}
         {!isZenMode && (
-          <div className="bg-black/60 border border-white/10 rounded-xl p-4 sm:p-5 backdrop-blur-md space-y-4">
+          <div className="bg-[#ffffff] border border-white/10 rounded-xl p-4 sm:p-5 backdrop-blur-md space-y-4">
             {/* 1. Duration Selection */}
             <div>
               <div className="flex items-center justify-between mb-2">
